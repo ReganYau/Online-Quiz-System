@@ -15,6 +15,7 @@ namespace OnlineQuizSystem
         private string email;
         private string role;
         private bool isLoggedIn;
+
         // Public Properties
         public int UserId
         {

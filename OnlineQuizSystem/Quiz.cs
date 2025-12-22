@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace OnlineQuizSystem
 {
-    internal class Quiz
+    public class Quiz
     {
+       
+      
     }
 }
