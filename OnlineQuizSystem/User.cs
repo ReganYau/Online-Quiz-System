@@ -1,99 +1,60 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;
 
 namespace OnlineQuizSystem
 {
+    // Base class used to represent a user account (admin or student).
     public class User
     {
-        // Private Fields
-        public int userId;
-        private string username;
-        public string password;
-        private string email;
-        private string role;
-        private bool isLoggedIn;
+        public int UserId { get; } // Storing unique user ID.
+        public string UserName { get; private set; } // Storing username.
+        public string Password { get; private set; } // Storing password.
+        public string Email { get; private set; } // Storing email.
+        public string Role { get; protected set; } // Storing role (admin/student).
 
-        // Public Properties
-        public int UserId
-        {
-            get {  return userId; }
-            set { userId = value; }
-        }
+        public bool IsLoggedIn { get; private set; } // Storing login state.
 
-        public string UserName
-        {
-            get { return username; }
-            set { username = value; }
-        }
-
-        public string Password
-        {
-            get { return password ; }
-            set { password = value; }
-        }
-
-        public string Email
-        {
-            get { return email; }
-            set { email = value; }
-        }
-
-        public string Role
-        {
-            get { return role; }
-            set { role = value; }
-        }
-        public bool IsLoggedIn
-        {
-            get { return isLoggedIn; }
-            set { isLoggedIn = value; }
-        }
-
-        //Parameterised Constructor
+        // Constructor used to create a user object.
         public User(int userId, string username, string password, string email, string role)
         {
-            this.userId = userId;
-            this.username = username;
-            this.password = password;
-            this.email = email;
-            this.role = role;
-            this.isLoggedIn = false;
+            UserId = userId; // Populating user ID.
+            UserName = username ?? ""; // Populating username.
+            Password = password ?? ""; // Populating password.
+            Email = email ?? ""; // Populating email.
+            Role = role ?? "user"; // Populating role (defaulting to user).
         }
 
-        // Methods
-        public bool Login(string username, string password)
+        // Method used to log in a user by checking username and password.
+        public virtual bool Login(string username, string password)
         {
-            if (UserName == username || Password == password)
-            {
-                // username and password are authenticated.
-                // Advise user that their login is successful.
-                IsLoggedIn = true;
-                Console.WriteLine("Login successful");
-            }
-            else
-            {
-                // username and/or password are incorrect. 
-                // advise user that their login details are incorrect.
-                isLoggedIn = false;
-                Console.WriteLine($"Login failed. Username {username} or passwordis incorrect");
-            }
-            return IsLoggedIn;
+            // Checking username and password values.
+            if (!CheckUsername(username) || !CheckPassword(password))
+                return false; // Returning false if authentication failed.
+
+            IsLoggedIn = true; // Setting login state to true.
+            return true; // Returning true if login succeeded.
         }
 
-        public void Logout()
+        // Method used to log out the user.
+        public virtual void Logout() => IsLoggedIn = false; // Setting login state to false.
+
+        // Method used to check if given username matches stored username.
+        public bool CheckUsername(string username)
+            => string.Equals(UserName, username ?? "", StringComparison.OrdinalIgnoreCase); // Returning username comparison reult.
+
+        // Method used to check if given password matches stored password.
+        public bool CheckPassword(string password)
+            => Password == (password ?? ""); // Returning password comparison result.
+
+        // Method used to update user profile values if new ones are provided.
+        public void UpdateProfile(string? username, string? email, string? password)
         {
-            if (IsLoggedIn)
-            {
-                IsLoggedIn = false;
-                Console.WriteLine("User is logged out successfully.");
-            }
-            else
-            {
-                Console.WriteLine("User is not logged in");
-            }
+            if (!string.IsNullOrWhiteSpace(username)) UserName = username.Trim(); // Updating username if provided.
+            if (!string.IsNullOrWhiteSpace(email)) Email = email.Trim(); // Updating email if provided.
+            if (!string.IsNullOrWhiteSpace(password)) Password = password; // Updating password if provided.
         }
+
+        // Method used to return a readable string for the user.
+        public override string ToString()
+            => $"{UserId} | {UserName} | {Email} | {Role}";
     }
 }

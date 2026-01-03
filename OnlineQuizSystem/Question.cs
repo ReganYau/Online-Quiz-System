@@ -1,78 +1,28 @@
-﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OnlineQuizSystem
 {
+    // Class used to represent a multiple-choice question.
     public class Question
     {
-        // Private Fields
-        private int questionId;
-        private string questionText;
-        private List<string> questionOptions;
-        private string questionCorrectAnswer;
-        private string questionDifficultyLevel;
+        public int QuestionID { get; } // Storing unique question ID.
+        public string QuestionText { get; set; } // Storing question text.
+        public List<string> Options { get; set; } // Storing list of options.
+        public string CorrectAnswer { get; set; } // Storing correct answer.
+        public string DifficultyLevel { get; set; } // Storing difficulty level text.
 
-        // Public Properties
-        public int QuestionId
-        { 
-            get { return questionId; } 
-            set { questionId = value; } 
-        }
-
-        public string QuestionText
-        { 
-            get { return questionText; } 
-            set { questionText = value; } 
-        }
-
-        public List<string> QuestionOptions
+        // Constructor used to create a question.
+        public Question(int questionId, string questionText, List<string> options, string correctAnswer, string difficultyLevel)
         {
-            get { return questionOptions; }
-            set { questionOptions = value; }
+            QuestionID = questionId; // Populating question ID.
+            QuestionText = questionText ?? ""; // Populating question text.
+            Options = options ?? new List<string>(); // Populating options list.
+            CorrectAnswer = correctAnswer ?? ""; // Populating correct answer.
+            DifficultyLevel = difficultyLevel ?? ""; // Populating difficulty level.
         }
 
-        public string QuestionCorrectAnswer
-        {
-            get { return questionCorrectAnswer; }
-            set { questionCorrectAnswer = value; }
-        }
-
-        public string QuestionDificultyLevel
-        {
-            get { return questionDifficultyLevel; }
-            set { questionDifficultyLevel = value; }
-        }
-
-        // Parameterised Constructor
-        public Question (int questionId, string questionText, List<string> questionOptions, string questionCorrectAnswer, string questionDifficultyLevel)
-        {
-            this.questionId = questionId;
-            this.questionText = questionText;
-            this.questionOptions = questionOptions ?? new List<string>();
-            this.questionCorrectAnswer = questionCorrectAnswer;
-            this.questionDifficultyLevel = questionDifficultyLevel;
-        }
-
-        public bool RightAnswer()
-        {
-
-        }
-
-        public bool WrongAnswer()
-        {
-        }
-
-        public int QuestionNumber()
-        {
-
-        }
-
-        public void SubmitAnswers()
-        {
-
-        }
+        // Method used to check if a chosen answer matches the correct answer.
+        public bool IsCorrect(string answer)
+            => answer == CorrectAnswer; // Returning true if answer is correct.
     }
 }

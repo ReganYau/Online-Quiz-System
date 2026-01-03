@@ -1,43 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace OnlineQuizSystem
 {
+    // Class used to represent a quiz category.
     public class Category
     {
-        // Private Fields
-        private int categoryId;
-        private string categoryName;
-        private string categoryDescription;
+        public int CategoryID { get; } // Storing the unique category ID.
+        public string CategoryName { get; set; } // Storing the category name.
+        public string CategoryDescription { get; set; } // Storing the category description.
 
-        // Public Properties
-        public int CategoryId 
+        // Constructor used to create a category.
+        public Category(int id, string name, string description)
         {
-            get { return categoryId; } 
-            private set { categoryId = value; } 
-        }
-        public string CategoryName
-        {
-            get { return categoryName; }
-            set { categoryName = value; }
+            CategoryID = id; // Populating category ID.
+            CategoryName = name ?? ""; // Populating category name - defaults to null.
+            CategoryDescription = description ?? ""; // Populating category description with a default to nul.
         }
 
-        public string CategoryDescription
-        {
-            get { return categoryDescription; }
-            set { categoryDescription = value; }
-        }
-
-        // Parameterised Constructor
-        public Category(int categoryId, string categoryName, string categoryDescription)
-        {
-            this.categoryId = categoryId;
-            this.categoryName = categoryName;
-            this.categoryDescription = categoryDescription;
-        }
-                
+        // Method used to return a readable string for the category.
+        public override string ToString() => $"{CategoryID}. {CategoryName}";
     }
 }
