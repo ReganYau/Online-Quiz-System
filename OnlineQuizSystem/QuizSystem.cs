@@ -879,7 +879,7 @@ namespace OnlineQuizSystem
         private static int ReadIntPrompt(string prompt, int min, int max)
         {
             Console.Write(prompt); // Outputting prompt.
-            return ReadInt(min, max); // Returning validated integer.
+            return ReadInt(min, max, prompt); // Returning validated integer.
         }
 
         // Method used to read a non-empty string input with a prompt.
@@ -905,13 +905,15 @@ namespace OnlineQuizSystem
         }
 
         // Method used to read an integer input between a minimum and maximum value.
-        private static int ReadInt(int min, int max)
+        private static int ReadInt(int min, int max, string retryPrompt)
         {
             while (true) // Looping until valid number is entered.
             {
-                string s = Console.ReadLine() ?? ""; // Reading user input.
+                string s = (Console.ReadLine() ?? "").Trim(); // Reading nd Trimming user input.
                 if (int.TryParse(s, out int v) && v >= min && v <= max)
                     return v; // Returning valid number.
+
+                Console.Write($"Invalid Input. {retryPrompt}"); // Prompting again.
             }
         }
 
