@@ -912,8 +912,6 @@ namespace OnlineQuizSystem
                 string s = Console.ReadLine() ?? ""; // Reading user input.
                 if (int.TryParse(s, out int v) && v >= min && v <= max)
                     return v; // Returning valid number.
-
-                Console.Write($"Enter number between {min} and {max}: "); // Prompting again.
             }
         }
 
