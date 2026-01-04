@@ -82,7 +82,7 @@ namespace OnlineQuizSystem
             Console.WriteLine("Admin Login (Authentication Required)\n");
 
             Console.Write("Admin ID: ");
-            int id = ReadInt(1, int.MaxValue); // Reading admin ID.
+            int id = ReadIntPrompt("Admin ID: ", 1, int.MaxValue); // Reading admin ID.
 
             Console.Write("Password: ");
             string pw = ReadNonEmpty(); // Reading password.
@@ -488,7 +488,7 @@ namespace OnlineQuizSystem
             Console.WriteLine("Student Login\n");
 
             Console.Write("Student ID: ");
-            int id = ReadInt(1, int.MaxValue); // Reading student ID.
+            int id = ReadIntPrompt("Student ID: ", 1, int.MaxValue); // Reading student ID.
 
             Console.Write("Password: ");
             string pw = ReadNonEmpty(); // Reading password.
