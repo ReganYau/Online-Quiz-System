@@ -1,0 +1,71 @@
+QuizID,QuestionID,QuestionText,Opt1,Opt2,Opt3,Opt4,CorrectAnswer,Difficulty
+1,1,What does encapsulation mainly do in OOP?,Makes programs run faster,Hides data using methods,Stops inheritance completely,Stores data only in arrays,Hides data using methods,Easy
+1,2,Which keyword is used to create an object in C#?,make,create,new,build,new,Easy
+1,3,What is inheritance used for?,Hide all variables,Stop polymorphism,Reuse code from a base class,Delete unused methods,Reuse code from a base class,Easy
+1,4,What does polymorphism allow?,Only private fields,Same method name with different behaviour,Only one constructor,Only static methods,Same method name with different behaviour,Medium
+1,5,Which access modifier allows access only within the same class?,public,protected,internal,private,private,Easy
+1,6,What is an interface mainly used for?,Store program data,Define a contract of methods,Replace variables with constants,Run code automatically,Define a contract of methods,Medium
+1,7,What is a constructor used for?,Delete an object,Compile an object,Encrypt an object,Initialise an object,Initialise an object,Easy
+1,8,What does the keyword override indicate in C#?,Create a new class,Replace a virtual method in a base class,Make a method private,Stop method calls,Replace a virtual method in a base class,Medium
+1,9,What is a class in OOP?,A single variable,A database table,A blueprint for objects,An operating system,A blueprint for objects,Easy
+1,10,What is a method in a class?,A stored image,An internet protocol,A compiler message,A function that belongs to the class,A function that belongs to the class,Easy
+2,11,What does Big O notation describe?,Exact runtime in seconds,How performance grows with input size,How much RAM a PC has,The number of lines in code,How performance grows with input size,Easy
+2,12,Which data structure works in FIFO order?,Stack,Tree,Queue,Graph,Queue,Easy
+2,13,Which data structure works in LIFO order?,Queue,Array,Heap,Stack,Stack,Easy
+2,14,What is an array?,A network protocol,A fixed size collection of items,A type of loop,A database key,A fixed size collection of items,Easy
+2,15,Which structure is best for key value lookup?,Stack,Queue,Hash table,Linked list,Hash table,Medium
+2,16,What is a linked list made of?,Only numbers in order,Two dimensional grids,Nodes connected by references,Encrypted records,Nodes connected by references,Easy
+2,17,Which traversal visits Left then Root then Right?,Preorder,Postorder,Breadth first,Inorder,Inorder,Medium
+2,18,What does a stack use to add an item?,Pop,Peek,Pull,Push,Push,Easy
+2,19,What does a queue use to remove an item?,Enqueue,Push,Peek,Dequeue,Dequeue,Easy
+2,20,Which structure is hierarchical with a root node?,Queue,Stack,Array,Tree,Tree,Easy
+3,21,What is UML mainly used for?,Encrypting files,Hosting websites,Visualising and modelling systems,Running unit tests,Visualising and modelling systems,Easy
+3,22,What does SOLID refer to?,Database rules,Network protocols,Web standards,Design principles for OOP,Design principles for OOP,Easy
+3,23,Which principle means one class should have one responsibility?,Open Closed,Liskov Substitution,Single Responsibility,Interface Segregation,Single Responsibility,Medium
+3,24,What does coupling describe?,How fast code runs,How dependent classes are on each other,How big a file is,How many users exist,How dependent classes are on each other,Medium
+3,25,High cohesion usually means?,Class does many unrelated things,Class has no methods,Class focuses on one clear purpose,Class avoids variables,Class focuses on one clear purpose,Medium
+3,26,Which design pattern ensures one instance only?,Factory,Observer,Adapter,Singleton,Singleton,Easy
+3,27,Which diagram shows classes and relationships?,Sequence diagram,Activity diagram,Use case diagram,Class diagram,Class diagram,Easy
+3,28,What is a use case diagram for?,Store database tables,Draw web page layouts,Show system interactions with actors,Replace source code,Show system interactions with actors,Easy
+3,29,What does MVC stand for?,Main Variable Class,Multi View Content,Model Version Control,Model View Controller,Model View Controller,Easy
+3,30,What is a design pattern?,A programming language,A database query,Reusable solution to a common problem,A type of antivirus,Reusable solution to a common problem,Easy
+4,31,What does HTML stand for?,HighText Modern Language,Hyper Transfer Markup Link,Home Tool Markup Language,HyperText Markup Language,HyperText Markup Language,Easy
+4,32,Which tag is used for a hyperlink?,link,url,a,href,a,Easy
+4,33,Which CSS property changes text colour?,text-style,font-color,shade,color,color,Easy
+4,34,Which CSS property controls spacing inside an element?,margin,border,content,padding,padding,Easy
+4,35,Which CSS property controls spacing outside an element?,padding,border,outline,margin,margin,Easy
+4,36,What is JavaScript mainly used for on a web page?,Style the page,Add interactivity and logic,Store server data,Replace HTML tags,Add interactivity and logic,Easy
+4,37,Which HTTP method is typically used to retrieve data?,POST,PUT,DELETE,GET,GET,Easy
+4,38,Which HTTP status code means Not Found?,200,500,301,404,404,Easy
+4,39,What does DOM stand for?,Data Object Method,Display Order Mode,Dynamic Output Manager,Document Object Model,Document Object Model,Medium
+4,40,What is a client server model?,Server requests and client responds,Only clients communicate,Only servers communicate,Client requests and server responds,Client requests and server responds,Easy
+5,41,What is a primary key?,A column with duplicates,A backup copy,Unique identifier for a row,A type of JOIN,Unique identifier for a row,Easy
+5,42,What does SQL stand for?,Simple Question Language,System Query List,Structured Query Language,Sorted Query Logic,Structured Query Language,Easy
+5,43,Which SQL keyword is used to get data?,GET,FETCH,CHOOSE,SELECT,SELECT,Easy
+5,44,Which SQL clause filters rows?,FILTER,ORDER,WHERE,SEARCH,WHERE,Easy
+5,45,Which SQL clause sorts results?,SORT BY,ARRANGE,LIST,ORDER BY,ORDER BY,Easy
+5,46,What does JOIN do?,Delete a table,Encrypt a database,Create a user,Combine rows from related tables,Combine rows from related tables,Medium
+5,47,What is normalization for?,Make data duplicated,Slow queries down,Reduce redundancy and improve structure,Remove all keys,Reduce redundancy and improve structure,Medium
+5,48,What does ACID relate to?,Web page styling,Network addressing,Password strength,Database transaction reliability,Database transaction reliability,Medium
+5,49,Which command creates a new table?,NEW TABLE,ADD TABLE,MAKE TABLE,CREATE TABLE,CREATE TABLE,Easy
+5,50,What is a foreign key?,A password field,A file encryption key,A key that links to another table primary key,A key for sorting only,A key that links to another table primary key,Medium
+6,51,What is phishing?,Blocking network traffic,Backing up data,Compressing files,Tricking users to reveal information,Tricking users to reveal information,Easy
+6,52,What does MFA mean?,Main Firewall Access,Multi Factor Authentication,Multi File Approval,Managed Form Access,Multi Factor Authentication,Easy
+6,53,What is malware?,A secure browser update,A database index,Software designed to cause harm,A type of router,Software designed to cause harm,Easy
+6,54,What is encryption used for?,Speed up WiFi,Remove viruses,Increase screen size,Protect data by making it unreadable without a key,Protect data by making it unreadable without a key,Easy
+6,55,What is hashing mainly used for?,Reversible file recovery,One way verification like passwords,Increasing download speed,Replacing databases,One way verification like passwords,Medium
+6,56,What does HTTPS provide?,Free web hosting,Faster CPU speed,Automatic backups,Encrypted web communication,Encrypted web communication,Easy
+6,57,What is least privilege?,Give admin access to all,Block every user,Remove passwords,Give only the access needed,Give only the access needed,Medium
+6,58,What is a strong password usually?,Only your first name,All lowercase letters,Same as username,Long with mixed characters,Long with mixed characters,Easy
+6,59,What is a firewall used for?,Store passwords,Create websites,Run SQL queries,Control network traffic based on rules,Control network traffic based on rules,Easy
+6,60,Social engineering targets what?,CPU performance,Hard drive speed,Screen resolution,Human behaviour,Human behaviour,Easy
+7,61,How many layers are in the OSI model?,4,5,6,7,7,Easy
+7,62,Which protocol is connection oriented?,UDP,ICMP,ARP,TCP,TCP,Easy
+7,63,Which protocol is connectionless?,TCP,HTTP,UDP,FTP,UDP,Easy
+7,64,What does DNS do?,Encrypt websites,Send emails,Store files,Translate domain names to IP addresses,Translate domain names to IP addresses,Easy
+7,65,What is an IP address?,A device serial number,A file extension,A password,A logical network address,A logical network address,Easy
+7,66,What is a MAC address?,An internet username,A type of firewall,A web domain name,Hardware address for a network interface,Hardware address for a network interface,Medium
+7,67,Which device forwards packets between networks?,Switch,Hub,Repeater,Router,Router,Easy
+7,68,Which device connects devices within a LAN using MAC addresses?,Router,Modem,Firewall,Switch,Switch,Easy
+7,69,What does DHCP do?,Encrypts WiFi traffic,Blocks spam emails,Hosts web pages,Automatically assigns IP addresses,Automatically assigns IP addresses,Easy
+7,70,Which IP version uses 128 bit addresses?,IPv4,IPX,ARP,IPv6,IPv6,Medium
